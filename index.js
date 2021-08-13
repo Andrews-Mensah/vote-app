@@ -21,6 +21,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 // Enable cors
 app.use(cors());
 
+//capturing the poll
+app.use('/poll', poll);
+
 
 app.use('/public', express.static('./public/'));
 // app.use(express.static(__dirname + 'public'));
@@ -104,7 +107,7 @@ function checkNotAuthenticated(req, res, next){
 }
 
 
-app.use('/poll', poll);
+
 
 //Start the server
 app.listen(PORT, ()=>{

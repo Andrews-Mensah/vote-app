@@ -11,8 +11,8 @@ const pusher = new Pusher({
 });
 
 
-router.get('/', (req, res)=> {
-    res.send('Poll Has Started')
+router.get('/', (req, res,)=> {
+    res.send('Poll Has Started');
 
 });
 
@@ -22,8 +22,8 @@ router.post('/', (req, res) =>{
         presidential: req.body.presidential
     });
 
-    return res.json({success: true, 
-        message: 'Thank You For Casting Your Vote'});
+    return res.send( 
+        'Thank You For Casting Your Vote');
 });
 
 
