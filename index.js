@@ -15,6 +15,18 @@ const PORT = process.env.PORT || 4000;
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: false}));
 
+const pusher = new Pusher({
+    appId: "1249139",
+    key: "aa1cefd26c4690b93d17",
+    secret: "0a2d98dbbee11c2fd11e",
+    cluster: "eu",
+    useTLS: true
+  });
+  
+  pusher.trigger("presidential-poll", "presidential-vote", {
+    message: "hello world"
+  });
+
 //bodyParser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
