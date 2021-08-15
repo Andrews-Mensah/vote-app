@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pg = require('pg');
 
-const Vote = require('../models/Vote');
+const Vote = require('../models/votes');
 
 
 
@@ -22,21 +22,17 @@ router.post('/', (req, res) =>{
         points: 1
     }
 
-    new Vote
+    new Vote (newVote).save().then(vote=>{
+        pusher.trigger('presidential-poll', 'presidential-vote', {
+            points: parseInt(vote.points),
+            presidential: req.body.presidential
+        });
+    
+        return res.send( 
+            'Thank You For Casting Your Vote');
 
-
-
-
-
-
-
-    pusher.trigger('presidential-poll', 'presidential-vote', {
-        points: 1,
-        presidential: req.body.presidential
-    });
-
-    return res.send( 
-        'Thank You For Casting Your Vote');
+    })
+    
 });
 
 

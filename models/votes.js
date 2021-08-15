@@ -17,7 +17,7 @@ const voteSchema = new Schema({
 
 
 //create collection and add schema
-const Vote = pg.model('Vote', voteSchema);
+const Vote = pg.model('votes', voteSchema);
 
 
 //exporting votes
