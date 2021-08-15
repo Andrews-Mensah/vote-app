@@ -19,7 +19,8 @@
     "pusher": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "pusher-js": "^7.0.3"
   },
   "description": ""
 }

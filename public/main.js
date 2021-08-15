@@ -34,7 +34,7 @@ const chartContainer = document.querySelector('#chartContainer');
 if (chartContainer){
     const chart = new CanvasJS.Chart('chartContainer', {
         animationEnabled: true,
-        theme: 'theme2',
+        theme: 'theme1',
         title: {
             text: 'Presidential Results'
         },

@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const bodyParser  = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const Pusher = require('pusher');
 
 const poll = require('./routes/poll');
 
