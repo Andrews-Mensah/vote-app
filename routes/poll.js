@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const pg = require('pg');
+
+const Vote = require('../models/Vote');
+
+
+
 const Pusher = require('pusher');
 
-const pusher = new Pusher({
-    appId: "1249139",
-    key: "aa1cefd26c4690b93d17",
-    secret: "0a2d98dbbee11c2fd11e",
-    cluster: "eu",
-    useTLS: true
-});
+
 
 
 router.get('/', (req, res,)=> {
@@ -17,6 +17,19 @@ router.get('/', (req, res,)=> {
 });
 
 router.post('/', (req, res) =>{
+    const newVote = {
+        presidential: req.body.presidential,
+        points: 1
+    }
+
+    new Vote
+
+
+
+
+
+
+
     pusher.trigger('presidential-poll', 'presidential-vote', {
         points: 1,
         presidential: req.body.presidential
