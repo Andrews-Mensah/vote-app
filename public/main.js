@@ -1,6 +1,5 @@
 const form = document.getElementById('presidential-vote');
 
-
 //Form-vote submission
 form.addEventListener('submit', (e) =>{
     const choice = document.querySelector('input[name=presidential]:checked').value;

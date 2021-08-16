@@ -39,6 +39,7 @@ app.use('/poll', poll);
 
 
 app.use('/public', express.static('./public/'));
+app.use('/css', express.static(__dirname + 'public/css'));
 // app.use(express.static(__dirname + 'public'));
 
 //Rendering main page
