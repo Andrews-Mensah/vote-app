@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <title> Home </title>
 </head>
 <body>
-    <h1> Welcome To The Ashanti Region EC Voting App </h1>
+
+    <div class = "index-main">
+        <h1 style="padding-left: 12%; margin-top: 5rem; margin-bottom: 3rem; font-weight: bolder; color: white;"> Welcome To The Ashanti Region EC Voting App </h1>
 
 
-    <div> <h3> Please Choose Your User Type </h3></div>
-    <div>
+    <div> <h3 style="padding-left: 35%; font-weight: bolder; color: white;"> Please Choose Your User Type </h3></div>
+    <div class = "index-form">
         <form action= "/admin/login" >
-            <a href="admin/login"> <input type="button" value = "Admin"> </a>
+            <a href="admin/login"> <input type="button" value = "Admin" style="border: 3px solid black; color:black; font-size: larger;"> </a>
         </form>
         <form action="/users/dashboard">
-            <a href="/users/dashboard"> <input type="button" value = "User"> </a>
+            <a href="/users/dashboard"> <input type="button" value = "User" style="border: 3px solid black; color:black; font-size: larger;"> </a>
 
         </form>
          
         
 
     </div>
+
+    </div>
+    
 </body>
 </html>

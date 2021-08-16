@@ -21,4 +21,4 @@ const Schema = pg.Schema;
 
 
 //exporting votes
-module.exports = Vote;
+// module.exports = Vote;

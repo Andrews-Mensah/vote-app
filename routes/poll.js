@@ -11,12 +11,14 @@ const { pool } = require('../dbConfig');
 
 
 
-
+//get route
 router.get('/', (req, res,)=> {
     res.send('Poll Has Started');
 
 });
 
+
+//post route
 router.post('/', (req, res) =>{
     const newVote = {
         presidential: req.body.presidential,

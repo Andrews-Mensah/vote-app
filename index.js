@@ -119,21 +119,21 @@ app.post("/admin/login", async (req,res) => {
 // });
 
 
-// //Authenticated functions
-// function checkAuthenticated (req, res, next){
-//     if (req.isAuthenticated()){
-//         return res.redirect ('/admin/dashboard');
-//     }
-//     next();
-// }
+//Authenticated functions
+function checkAuthenticated (req, res, next){
+    if (req.isAuthenticated()){
+        return res.redirect ('/admin/dashboard');
+    }
+    next();
+}
 
-// function checkNotAuthenticated(req, res, next){
-//     if(req.isAuthenticated()){
-//         return next();
-//     }
+function checkNotAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
     
-//     return req.redirect('admin/login');
-// }
+    return req.redirect('admin/login');
+}
 
 
 
