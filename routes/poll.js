@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pg = require('pg');
 
-const Vote = require('../models/votes');
+// const Vote = require('../models/votes');
 
 
 
