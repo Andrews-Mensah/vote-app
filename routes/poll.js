@@ -7,6 +7,7 @@ const pg = require('pg');
 
 
 const Pusher = require('pusher');
+const { pool } = require('../dbConfig');
 
 
 
@@ -34,6 +35,8 @@ router.post('/', (req, res) =>{
     })
     
 });
+
+
 
 
 module.exports = router;

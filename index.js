@@ -68,56 +68,71 @@ app.get('/users/dashboard', (req,res)=>{
     res.render("userdashboard")
 });
 
+//adminLogin route
 app.post("/admin/login", async (req,res) => {
-    let {email, password} = req.body;
+    let {email} = req.body;
 
-    console.log({
-        email,
-        password
-    });
+    try{
+        const admin = await pool.query("SELECT * FROM admin WHERE email = $1", [email]);
 
-    let errors = [];
-    if(!email || !password){
-        errors.push({message:"Please enter valid details"})
-    } else {
-        let hashedPassword = await bcrypt.hash(password,10);
-        console.log (hashedPassword)
-
-
-        pool.query (
-            `SELECT * FROM admin
-            WHERE email = $1`, [email], (err,result) =>{
-                if(err){
-                    throw err;
-                } else {
-                    console.log(result.rows)
-                }
-
-                if(result.row.length === 0){
-                    console.log("Email not registered as an admin");
-                    res.render('/admin/login')
-                }
-            }
-        )
+        if(admin.rows[0].roles === 'Admin'){
+            return res.redirect('/admin/dashboard')
+        }
+        return res.redirect('/admin/login');
     }
-});
-
-
-//Authenticated functions
-function checkAuthenticated (req, res, next){
-    if (req.isAuthenticated()){
-        return res.redirect ('/admin/dashboard');
+    catch(err){
+        console.error(err.message)
     }
-    next();
-}
 
-function checkNotAuthenticated(req, res, next){
-    if(req.isAuthenticated()){
-        return next();
-    }
+})
+
+    // console.log({
+    //     email,
+    //     password
+    // });
+
+    // let errors = [];
+    // if(!email || !password){
+    //     errors.push({message:"Please enter valid details"})
+    // } else {
+    //     let hashedPassword = await bcrypt.hash(password,10);
+    //     console.log (hashedPassword)
+
+
+    //     pool.query (
+    //         `SELECT * FROM admin
+    //         WHERE email = $1`, [email], (err,result) =>{
+    //             if(err){
+    //                 throw err;
+    //             } else {
+    //                 console.log(result.rows)
+    //             }
+
+    //             if(result.row.length === 0){
+    //                 console.log("Email not registered as an admin");
+    //                 res.render('/admin/login')
+    //             }
+    //         }
+    //     )
+    // }
+// });
+
+
+// //Authenticated functions
+// function checkAuthenticated (req, res, next){
+//     if (req.isAuthenticated()){
+//         return res.redirect ('/admin/dashboard');
+//     }
+//     next();
+// }
+
+// function checkNotAuthenticated(req, res, next){
+//     if(req.isAuthenticated()){
+//         return next();
+//     }
     
-    return req.redirect('admin/login');
-}
+//     return req.redirect('admin/login');
+// }
 
 
 
