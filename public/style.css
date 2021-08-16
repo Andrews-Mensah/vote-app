@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .container {
+    background: url(img/login-background.png) no-repeat center center; 
+    background-size: cover;
+} */
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left:  auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.heading h1{
+    font-size: 45px;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+/* .main-container{
+    height: 100%;
+} */
+
+.d-container {
+    display: flex;
+    flex-direction: row;
+    /* height: 1000rem; */
+}
+
+.sidebar-menu {
+    width: 20%;
+    /* height: 100%; */
+    background-color:black
+}
+
+header{
+    text-align: center;
+    align-items: center;
+    margin: 1rem auto;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    background-color: aqua;
+    height: 10%;
+    margin-top: 0rem;
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+.dashboard .dashHeaderIndex {
+    height: 20%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 5%;
+    box-sizing: border-box;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.dashboard .dashHeaderIndex div{
+    /* display: inline-block; */
+    font-size: 1.2rem;
+    height: 100%;
+    background-color: aqua;
+    border-radius: 15px;
+    margin: 1rem;
+}
+
+.dashboard .dashHeaderIndex div p, span{
+    height: 50%;
+    box-sizing: border-box;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem ;
+}
+
+
+
+/* footer {
+    height: 10%;
+    width: 100%;
+    background-color: blue;
+} */
+
+.upper-sidebar {
+    align-items: center;
+    text-align: center;
+}
+
+.upper-sidebar h4 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.upper-sidebar img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    margin: 2rem 3.5rem;
+}
+
+
+.content-top {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+}
+
+.content-top .zmdi .zmdi-power {
+    margin-left: 20rem;
+    padding-left: 20rem;
+}
+
+.log-out-logo {
+    margin-right: 0;
+    margin-left: 60rem;
+    text-decoration: none;
+}
+
+.lower-sidebar {
+    margin-bottom: 2rem;
+}
+
+.lower-sidebar ul li {
+    list-style: none;
+    padding: 10% 0 10% 1rem;
+
+    /* cursor: pointer; */
+    /* border-bottom: gray dashed 1px; */
+}
+
+.lower-sidebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.lower-sidebar ul li:hover {
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+.lower-sidebar ul li a:hover {
+    color: aqua;
+
+}
+
+.inputArea {
+    /* background-color: rgba(255, 255, 255, 0.144); */
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 11rem;
+    left: 35%;
+    /* border-radius: 1rem; */
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px; */
+}
+
+.inputArea input,
+button,
+select {
+    display: block;
+    margin: 2rem auto;
+    width: 85%;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    /* height: 2rem; */
+    border: none;
+}
+
+.inputArea button,
+select {
+    width: 90%;
+}
+
+.content .content-body {
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+
+}
+
+
+
+.content-body .tableRow table {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 2rem
+    
+}
+
+.content-body table .tableRow thead {
+    /* margin: 2rem; */
+    text-align: left;
+}
+
+
+table thead th{
+    margin: 2rem;
+    padding: 3rem;
+    border-bottom: 1px solid aqua;
+    text-align: left;
+}
+
+table tbody{
+    margin-left: 12rem;
+    padding: 2rem;
+}
+
+tbody tr{
+    margin-left: 12rem;
+    padding: 5rem;
+}
+
+tr td {
+    padding: 3rem;
+    border-bottom: 1px solid aqua;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f5f5f552;
+    color: black;
+}
+
+.red{
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.orange{
+    background-color: rgba(255, 166, 0, 0.7);
+}
+
+.green{
+    background-color: rgba(0, 128, 0, 0.7);
+}

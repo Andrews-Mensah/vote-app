@@ -11,5 +11,76 @@
 
     <a href="adminlogin.ejs"> Logout</a>
     <h1> Hello Admin</h1>
+
+    <div class="main-container">
+        <header>
+                INVENTORY MANAGEMENT SYSTEM
+        </header>
+
+        <div class="d-container">
+            <div class="sidebar-menu">
+                <div class="upper-sidebar">
+                    <img src="img/user-photo.png" alt="">
+                    <h4>
+                        User
+                    </h4>
+                </div>
+                <div class="lower-sidebar">
+                    <ul>
+                        <li> <a href="index.html"> <i class="zmdi zmdi-view-dashboard"> </i> Dashboard </a></li>
+                        <li><a href="additem.html"> <i class="zmdi zmdi-notifications-add"></i> Add Item</a></li>
+                        <li><a href="update2.html"> <i class="zmdi zmdi-thumb-up"></i> Update Quantity</a></li>
+                        <li><a href="update.html"> <i class="zmdi zmdi-thumb-up"></i> Update Item Details</a></li>
+                        <li><a href="remove.html"> <i class="zmdi zmdi-close-circle"></i> Remove Item</a></li>
+
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="content">
+                <div class="content-top">
+                         <div class="toggle" onclick="toggleMe()">
+                            <i class="zmdi zmdi-menu"></i>
+                         </div>
+                         <div>
+                            <h4 style="text-align: center; font-size: 2rem; font-weight: bolder;">
+                                Dashboard
+                            </h4>
+                         </div>
+                </div>
+
+                <div class="dashboard">
+                    <div class="dashHeaderIndex">
+                        <div class="numberOfItems">
+                            <p>TOTAL NUMBER OF ITEMS</p>
+                            <span id="totalItems"></span>
+                        </div>
+                        <div class="itemsInStock">
+                            <p>ITEMS IN STOCK</p>
+                            <span id="itemsInStock"></span>
+                        </div>
+                        <div class="numberOfCategories">
+                            <p>NUMBER OF CATEGORIES</p>
+                            <span id="numberOfCategories"></span>
+                        </div>
+                    </div>
+                <div class="content-body">
+                    <table>
+                        <thead>
+                            <tr class="tableRow" id="table-header">
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Indicator</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
 </body>
 </html>
