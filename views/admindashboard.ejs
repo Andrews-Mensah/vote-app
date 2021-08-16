@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link rel="stylesheet" href="../public/style.css">
     <title> Admin Dashboard </title>
 </head>
 <body>
@@ -27,11 +28,11 @@
                 </div>
                 <div class="lower-sidebar">
                     <ul>
-                        <li> <a href="index.html"> <i class="zmdi zmdi-view-dashboard"> </i> Dashboard </a></li>
-                        <li><a href="additem.html"> <i class="zmdi zmdi-notifications-add"></i> Add Item</a></li>
-                        <li><a href="update2.html"> <i class="zmdi zmdi-thumb-up"></i> Update Quantity</a></li>
-                        <li><a href="update.html"> <i class="zmdi zmdi-thumb-up"></i> Update Item Details</a></li>
-                        <li><a href="remove.html"> <i class="zmdi zmdi-close-circle"></i> Remove Item</a></li>
+                        <li> <a href="/admin/dashboard"> <i class="zmdi zmdi-view-dashboard"> </i> Dashboard </a></li>
+                        <li><a href="#"> <i class="zmdi zmdi-notifications-add"></i> Add Candidate</a></li>
+                        <li><a href="#"> <i class="zmdi zmdi-thumb-up"></i> Update Candidates</a></li>
+                        <li><a href="#"> <i class="zmdi zmdi-thumb-up"></i> Update Candidate Details</a></li>
+                        <li><a href="#"> <i class="zmdi zmdi-close-circle"></i> Remove Candidate </a></li>
 
                     </ul>
                     
@@ -69,10 +70,10 @@
                         <thead>
                             <tr class="tableRow" id="table-header">
                                 <th>Name</th>
-                                <th>Description</th>
-                                <th>Category</th>
-                                <th>Quantity</th>
-                                <th>Indicator</th>
+                                <th> Candidate Details </th>
+                                <th> Type of Poll </th>
+                                <th> Political Party </th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody id="tableBody"></tbody>
